@@ -1,0 +1,11 @@
+[workspace]
+resolver = "2"
+members = ["sim", "gdext"]
+
+# Shared release profile: the sim runs months/years of ticks when the player
+# fast-forwards, so we want it fast even in editor builds.
+[profile.dev]
+opt-level = 1
+
+[profile.release]
+lto = "thin"

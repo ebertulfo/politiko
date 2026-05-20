@@ -1,0 +1,11 @@
+[package]
+name = "politiko_sim"
+version = "0.1.0"
+edition = "2021"
+description = "Politiko simulation engine — pure logic, zero rendering dependencies."
+
+[dependencies]
+# serde is used only for save/load (Phase 0.1 Step 6). It is NOT a rendering
+# dependency, so the pure-logic rule still holds.
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

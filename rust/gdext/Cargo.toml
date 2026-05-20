@@ -1,0 +1,15 @@
+[package]
+name = "politiko_gdext"
+version = "0.1.0"
+edition = "2021"
+description = "Godot 4 GDExtension binding for the Politiko simulation engine."
+
+[lib]
+# Godot loads the simulation as a dynamic library.
+crate-type = ["cdylib"]
+
+[dependencies]
+politiko_sim = { path = "../sim" }
+# gdext 0.5 supports Godot 4.6 via the api-4-6 feature. Pinned to a published
+# release (not git master) for a stable API surface.
+godot = { version = "0.5", features = ["api-4-6"] }

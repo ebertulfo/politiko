@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cargo --version)",
+      "Bash(rustc --version)",
+      "Bash(godot --version)",
+      "Bash(godot4 --version)",
+      "PowerShell(Get-Command *)"
+    ]
+  }
+}

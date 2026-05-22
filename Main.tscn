@@ -1,0 +1,82 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8politikomain0"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_main"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_main")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatusBar" type="PanelContainer" parent="Layout"]
+layout_mode = 2
+
+[node name="Bar" type="HBoxContainer" parent="Layout/StatusBar"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Margin" type="MarginContainer" parent="Layout/StatusBar/Bar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 8
+
+[node name="Readouts" type="HBoxContainer" parent="Layout/StatusBar/Bar/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="TickLabel" type="Label" parent="Layout/StatusBar/Bar/Margin/Readouts"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Month 0"
+
+[node name="TreasuryLabel" type="Label" parent="Layout/StatusBar/Bar/Margin/Readouts"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Treasury: -"
+
+[node name="ApprovalLabel" type="Label" parent="Layout/StatusBar/Bar/Margin/Readouts"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Approval: -"
+
+[node name="PopulationLabel" type="Label" parent="Layout/StatusBar/Bar/Margin/Readouts"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Population: -"
+
+[node name="AdvanceButton" type="Button" parent="Layout/StatusBar/Bar"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+text = "Advance Month ▶"
+
+[node name="Content" type="Panel" parent="Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Placeholder" type="Label" parent="Layout/Content"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "(map / region table — later slices)"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -4,3 +4,7 @@
 
 # Rust build artifacts (the GDExtension .dll/.so/.dylib is rebuilt with `cargo build`)
 /rust/target/
+
+# Throwaway spike DEM/map artifacts — large (incl. a 421MB geojson) and regenerable
+# from the Python builders in spike/gameworld/. Source is tracked; generated data is not.
+/spike/gameworld/data/

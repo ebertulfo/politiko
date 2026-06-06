@@ -2,7 +2,9 @@
 
 - **Status:** Brainstorm in progress (2026-06-06). **Not yet settled, not PRD'd.** This is the
   candidate for Statesman's missing **stakes layer** — the political tension the doc
-  [`statesman.md`](statesman.md) flags as "the next thing to design."
+  [`statesman.md`](statesman.md) flags as "the next thing to design." Two deep-research rounds
+  done (mechanics of corruption; political economy of patronage/survival). The election-stakes
+  knot now has a **proposed resolution** (see "The deferred bill" below).
 - **Belongs to:** Statesman (Game 1). Builds on the existing engine; adds one new per-unit state
   field + effects, no new crate.
 - **Theme it carries:** the Statesman shadow — *"a movement that overthrew the dynasties could
@@ -62,6 +64,48 @@ corrupting. Concretely, corruption buys:
 "Build faster, grease the wheels" is one *minor* use. The real temptation is: **corruption lets
 you keep power when governing honestly isn't winning fast enough.** That is the reformer's
 Faustian bargain and the tension the sim was missing.
+
+### The formal spine: coalition breadth (W)
+
+Selectorate theory (Bueno de Mesquita & Smith, *The Logic of Political Survival*; *The Dictator's
+Handbook*) gives the two loops a single load-bearing variable: the size of the **winning coalition
+W** — the base whose support you actually need to keep the mandate. (Empirically the *direction* is
+robust; specific magnitudes are contested — treat W as a design device, not a calibrated quantity.)
+
+- **Large W (broad base)** → you can only satisfy many people with **public goods** → survival is
+  *coupled* to prosperity → **the honest loop.** Expensive; you can genuinely lose.
+- **Small W (narrow base)** → you satisfy a few with **private goods** (patronage, rents) →
+  survival is *decoupled* from prosperity → **the shadow loop.** "Kleptocracy flourishes at exactly
+  this configuration."
+
+The pivotal mechanic: **W is never a slider the player sets — it is *derived* from how the player
+buys survival** (fits the engine's derived-vs-authored rule). Win on broad satisfaction/public
+goods → W large. Survive by paying patrons/machines/local rents → **each act of patronage
+implicitly shrinks W.** And shrinking W is *seductive*, because a small coalition is:
+
+- **cheaper** to maintain (`cost of survival ∝ W` — "pay just enough, not a penny more"),
+- **more coup-/defection-proof** (the *loyalty trap*: `loyalty ∝ 1 − W/S` — a big pool of
+  interchangeables means your few loyalists dare not defect),
+- **longer-tenured** (`tenure ∝ 1/W` — small-coalition rulers last far longer),
+- **more graft headroom** (`1/W`).
+
+So the country rots (public metrics fall) while the player becomes *more* secure and *longer*-lived.
+**That is "becoming the dynasty" — not a scripted morality meter, but a low-W attractor the player
+slides into because it is locally optimal every turn.** The theme emerges from the math.
+
+### The "buy approval" step (machine-politics dials)
+
+When the player taps patronage to prop up support, model it with the clientelism literature's
+texture (Stokes; Nichter; Ravanilla) rather than a clean transfer:
+
+- `delivered support = spend × conversion × (1 − slippage)` — **slippage** is secret-ballot
+  defection (bought support evaporates); only **reciprocity** retains it.
+- A per-unit **reciprocity/loyalty stock** that rises with repeated spending and lowers slippage —
+  the self-reinforcing flywheel (the machine gets stickier; a fresh challenger faces full slippage).
+- **Conversion scales inversely with income** — patronage is cheaper/more effective in poorer
+  units (high marginal utility of cash), coupling it to existing `poverty`/`daily_wage`. As a region
+  develops, the machine's grip naturally weakens (the modernization tendency, for free).
+- A **payment floor** (tiny spends do nothing) + concave returns to block micro-spend exploits.
 
 ## The grease curve (corruption is not a debuff — it's leverageable)
 
@@ -186,6 +230,34 @@ Philippines sits at **32/100 and falling** (Transparency International 2025, an 
 as slow national decay, **never a game-over** (consistent with the settled non-fatal / open-ended
 rules).
 
+## The deferred bill: what you lose when you lose the mandate (PROPOSED resolution of the knot)
+
+The shadow loop only has teeth if losing power costs something — and the research gives a resolution
+that is *self-balancing*: **the shadow loop builds its own punishment.** While in power, banked rents
+and a narrowed coalition are *assets*; the moment the player loses the mandate, they lose immunity and
+those assets flip into liabilities. Three deferred bills, all **non-fatal** (a brutal setback, never
+game-over — honors the settled rules):
+
+1. **The reckoning.** Accumulated corruption becomes prosecutable — asset/war-chest seizure, charges.
+   *Grounded:* ~half of ousted autocrats face exile/jail/death; 78+ countries have prosecuted
+   ex-leaders since 2000, charges *overwhelmingly* corruption. **Severity scales with `1/W`** — a
+   narrow/personalist regime draws a harsh fate (~75% bad outcome), a broad/clean one exits safe
+   (<20%). *How* you held power sets *what* you lose.
+2. **The reversal.** The successor freezes and rolls back the player's levers and in-flight projects
+   wholesale (real anchor: a new administration rescinding ~78 predecessor orders in one stroke). Your
+   legacy decays; you re-enter from a weaker position. Tunable `reversal_fraction`.
+3. **The bust-snap.** Rent-bought loyalty is *fair-weather* — it holds in a boom and **snaps in a
+   crisis**. A small-W regime is durable while prosperity rises but **brittle** when the economy turns:
+   a downturn (debt crisis / wage drop / growth stall) detonates dormant `grievance` into
+   scandal/unrest, and the bought coalition defects *during* the crunch. The same corruption that was
+   glue becomes the detonator. (Anchor: the corruption-stability brake vanishes in downturns; rent
+   loyalty snaps in crises.)
+
+Net: the cheap survival path compounds a hidden liability and a brittleness that detonates exactly when
+the player can least afford it. The "soft loss" election finally *means something* without a campaign
+minigame — you are still building a nation; the stakes just became real. **Corruption and
+election-stakes were the same knot; W ties them together.**
+
 ## Settled-so-far (this brainstorm)
 
 1. **Corruption is leverageable, not a pure debuff** — inverted-U grease curve (Ang's access money).
@@ -198,15 +270,21 @@ rules).
 5. **Self-reinforcing trap** (two basins, tipping point, hysteresis) → leverage is a treadmill.
 6. **Non-fatal**, CPI-style scoreboard, scandals as events. Honors the open-ended/no-game-over rules.
 7. **Grease = faster builds at higher peso cost.**
+8. **Coalition breadth (W) is the formal spine** — derived (never set), shrunk by patronage; small W
+   = cheaper/coup-proof/longer-tenured survival decoupled from prosperity = the dynasty attractor.
+9. **The election-stakes knot has a proposed resolution: the deferred bill** (reckoning + reversal +
+   bust-snap, severity ∝ 1/W). Self-balancing; the shadow loop builds its own punishment.
 
 ## Open questions (resume here)
 
-- **THE KNOT — what do you lose when you lose the mandate?** The shadow loop only has value if
-  staying in power *costs* something to lose. *Left deliberately unresolved.* Candidates aired:
-  (a) **lose capability/runway** — a new administration freezes levers / reverses policy / imposes
-  an austerity term (you keep playing, governing gets harder); (b) **lose score/legacy only** — the
-  mandate is the scoreboard, little changes turn-to-turn. **Corruption and election-stakes are the
-  same design knot — neither is finishable without the other.**
+- **THE KNOT — what do you lose when you lose the mandate? → PROPOSED (needs sign-off).** Resolved
+  above as **the deferred bill** (reckoning + reversal + bust-snap, severity ∝ 1/W). Awaiting the
+  user's confirmation that this is the direction. The earlier candidates (lose capability/runway;
+  lose score only) are *subsumed* — reversal = lose runway, the reckoning/seizure = lose more.
+- **Ambition: minimal spine vs. full model.** Minimal = corruption-per-region (done) + one derived
+  **W** + patronage shrinks W + losing triggers a reckoning scaled by W. Full adds the grievance
+  reservoir, broker slippage/reciprocity stocks, civil-service levers, the bust-snap as its own
+  system. *Which do we build first?* (Guards the "nation-building, not a politics sim" line.)
 - **What exactly does "grease" buy** beyond build speed — also industry output? compliance? Keep to
   1–2 for legibility. (Industry-output coupling flagged as raw — the economy should *leverage*
   corruption, not be dominated by it.)
@@ -240,9 +318,9 @@ Same domain, mirror image. Statesman governs corruption as an **ambient climate*
 (personal, fatal — jail/extinction). Statesman's `corruption`/patronage climate is the world
 Trapo's dynasty swims in. The mechanics are deliberately compatible.
 
-## Research foundation (round-one deep-research, 2026-06-06)
+## Research foundation (two deep-research rounds, 2026-06-06)
 
-Mechanism sources behind the above (verified, with confidence flags in the research briefs):
+**Round one — mechanics of corruption.** Sources behind the above (with confidence flags in briefs):
 - **Klitgaard**, *Controlling Corruption* (1988) — `C = M + D − A`.
 - **Olken**, *Monitoring Corruption* (NBER w11753 / JPE 2007) — ~24–28% measured "missing
   expenditures"; price-padding vs. quantity-skimming; audits ~8pp.
@@ -255,11 +333,24 @@ Mechanism sources behind the above (verified, with confidence flags in the resea
   anticorruption reforms fail."
 - **Yuen Yuen Ang**, *China's Gilded Age* (2020) — the theft/exchange × elite/non-elite 2×2;
   access money as growth-greasing steroids.
-- **Bueno de Mesquita & Smith**, *The Dictator's Handbook* — selectorate theory (basis for the
-  shadow loop; to be hardened by a planned round-two dive on the political economy of patronage).
 - **Philippines context** — padrino/*utang na loob*; PDAF/Napoles (~₱10B); DPWH "SOP" 20–30%;
   2025 flood-control scandal (421 ghost projects); dynastic saturation ~75–85%; CPI 32/100 (TI 2025).
 
-> **Note:** the *party-upside / shadow loop* (selectorate theory, machine politics, vote-buying,
-> rents-as-glue) has **not** yet had a dedicated deep-research pass — it was reasoned from theory.
-> A round-two research dive on the political economy of patronage is the planned way to harden it.
+**Round two — political economy of patronage & survival** (hardens the shadow loop + the knot):
+- **Bueno de Mesquita & Smith**, *The Logic of Political Survival* / *The Dictator's Handbook* —
+  selectorate theory: W → public vs private goods; loyalty norm `W/S`; `tenure ∝ 1/W`;
+  `kleptocracy ∝ 1/W`. *Direction robust; magnitudes contested (state capacity matters — ISQ 2015).*
+- **Stokes; Nichter; Ravanilla et al.** — machine politics: brokers, vote- vs turnout-buying,
+  secret-ballot slippage, reciprocity, targeting the poor; PH cost-per-vote ~₱250–500 (mayoral).
+- **Grease-vs-sand (Leff/Huntington vs Myrdal); Gerschewski (legitimation/repression/co-optation);
+  "Beyond Patronage"** — corruption as fair-weather glue: stabilizing in booms, snaps in crises;
+  anti-corruption grievance drove protests in 55 countries since 2017.
+- **Goemans/Archigos; post-tenure-fate datasets** — losing power: ~half of ousted autocrats face
+  exile/jail/death; 78+ countries prosecuted ex-leaders since 2000 (overwhelmingly corruption);
+  personalist rulers ~75% bad fate vs <20% for regular exits; successors reverse predecessors
+  wholesale (~78 orders rescinded in one stroke).
+- **Levitsky & Way (competitive authoritarianism); PRI, ZANU-PF, EDSA→dynasties (calcifiers) vs.
+  Singapore PAP / HK ICAC / Botswana DCEC (stayed clean)** — calcification mechanism = funding
+  survival through patronage + capturing the referees; clean path = a self-binding constraint
+  (paid-for meritocracy, an independent watchdog you can't switch off) the incumbent submits to
+  *while still powerful*. Nuance: it's the *threat of losing*, not term limits, that disciplines.

@@ -59,7 +59,8 @@ The direction to explore (distinct from Game 2's personal-corruption tycoon) is 
 makes *governing* hard**: interest groups / factions with competing demands, legitimacy and coalitions,
 a political system you must work *through* rather than a set of sliders you simply own. That layer — not
 personal enrichment — is what could give the map game its missing tension. **This is the next thing to
-design.**
+design** — now in progress as [`corruption.md`](corruption.md), which proposes corruption (as a
+leverageable instrument with a shadow "stay-in-power" loop) as exactly this stakes layer.
 
 ## World, Story & Setting (grill-me — in progress, 2026-06-06)
 

@@ -4,7 +4,8 @@
   candidate for Statesman's missing **stakes layer** — the political tension the doc
   [`statesman.md`](statesman.md) flags as "the next thing to design." Two deep-research rounds
   done (mechanics of corruption; political economy of patronage/survival). The election-stakes
-  knot now has a **proposed resolution** (see "The deferred bill" below).
+  knot is **resolved** as a **fully national** deferred bill (see below) — no personal/regime-survival
+  framing. Ambition: **full model**, aimed at nation-building depth.
 - **Belongs to:** Statesman (Game 1). Builds on the existing engine; adds one new per-unit state
   field + effects, no new crate.
 - **Theme it carries:** the Statesman shadow — *"a movement that overthrew the dynasties could
@@ -42,13 +43,14 @@ SHADOW:  skim / grease → war chest + patronage → buy approval, loyalty & com
                               → survive the mandate, decoupled from whether the country improved
 ```
 
-This is **selectorate theory** (Bueno de Mesquita & Smith, *The Dictator's Handbook*): leaders
-survive by rewarding the coalition that keeps them in power. A *broad* coalition must be paid in
-**public goods** (real prosperity — the honest loop); a *small, bought* coalition is paid in
-**private goods** (patronage — the shadow loop). The reform Movement starts needing the whole
-country's faith, but it can quietly **shrink its coalition** — survive on fewer, well-fed
-loyalists. The day it does, it has *become a dynasty by definition* (a dynasty just *is* a
-small-coalition patronage machine). That coalition-shrink **is** the calcification.
+The underlying idea is borrowed from **selectorate theory** (Bueno de Mesquita & Smith) but
+**re-anchored to nation-building, not regime survival** (see "Framing guardrail" below): a movement
+that needs *broad* support can only keep the mandate by delivering **broad public goods** (real,
+widely-shared prosperity — the honest loop); a movement that rests on a *narrow* base can keep the
+mandate by satisfying a **few power centers** with patronage and rents (the shadow loop). The reform
+Movement starts needing the whole country's faith, but it can quietly **narrow its base** — prop up a
+few regions/sectors/dynasts instead of lifting everyone. The day it does, its "growth" goes hollow
+and it has *become the establishment it replaced.* That narrowing **is** the calcification.
 
 ### What corruption actually buys the *party* (the upside we must not forget)
 
@@ -65,33 +67,37 @@ corrupting. Concretely, corruption buys:
 you keep power when governing honestly isn't winning fast enough.** That is the reformer's
 Faustian bargain and the tension the sim was missing.
 
-### The formal spine: coalition breadth (W)
+### The formal spine: development breadth (B)
 
-Selectorate theory (Bueno de Mesquita & Smith, *The Logic of Political Survival*; *The Dictator's
-Handbook*) gives the two loops a single load-bearing variable: the size of the **winning coalition
-W** — the base whose support you actually need to keep the mandate. (Empirically the *direction* is
-robust; specific magnitudes are contested — treat W as a design device, not a calibrated quantity.)
+The two loops share a single load-bearing variable: **development breadth B** — *how broadly your
+support and your development actually rest.* (Borrowed from selectorate theory's winning-coalition
+idea, but reframed; the *direction* of the underlying research is robust, magnitudes contested — B
+is a design device, not a calibrated quantity.)
 
-- **Large W (broad base)** → you can only satisfy many people with **public goods** → survival is
-  *coupled* to prosperity → **the honest loop.** Expensive; you can genuinely lose.
-- **Small W (narrow base)** → you satisfy a few with **private goods** (patronage, rents) →
-  survival is *decoupled* from prosperity → **the shadow loop.** "Kleptocracy flourishes at exactly
-  this configuration."
+- **Broad (high B)** → you keep the mandate only by delivering **broad public goods** → the mandate
+  is *coupled* to real, widely-shared prosperity → **the honest loop.** Slower, costlier; you can
+  genuinely lose an election if results lag.
+- **Narrow (low B)** → you keep the mandate by satisfying a **few power centers** with patronage and
+  rents → the mandate is *decoupled* from whether the country broadly improves → **the shadow loop.**
+  Top-line numbers can look fine while the country hollows out underneath.
 
-The pivotal mechanic: **W is never a slider the player sets — it is *derived* from how the player
-buys survival** (fits the engine's derived-vs-authored rule). Win on broad satisfaction/public
-goods → W large. Survive by paying patrons/machines/local rents → **each act of patronage
-implicitly shrinks W.** And shrinking W is *seductive*, because a small coalition is:
+The pivotal mechanic: **B is never a slider the player sets — it is *derived* from how the player
+sustains the mandate** (fits the engine's derived-vs-authored rule). Keep approval by broad
+development → B stays high. Keep approval by funneling to a few loud regions/sectors/dynasts →
+**each act of patronage narrows B.** And narrowing is *seductive*, because propping up a few is
+simply **cheaper and faster** than lifting the whole uneven country — the easy way to hold the
+mandate when honest development isn't paying off quickly enough.
 
-- **cheaper** to maintain (`cost of survival ∝ W` — "pay just enough, not a penny more"),
-- **more coup-/defection-proof** (the *loyalty trap*: `loyalty ∝ 1 − W/S` — a big pool of
-  interchangeables means your few loyalists dare not defect),
-- **longer-tenured** (`tenure ∝ 1/W` — small-coalition rulers last far longer),
-- **more graft headroom** (`1/W`).
+So the country hollows (broad public metrics stagnate while a propped-up few look healthy) precisely
+*because* the cheap path keeps working. **That is "becoming the establishment you replaced" — not a
+scripted morality meter, but a low-B attractor the player slides into because it is locally optimal
+every turn.** The theme emerges from the math.
 
-So the country rots (public metrics fall) while the player becomes *more* secure and *longer*-lived.
-**That is "becoming the dynasty" — not a scripted morality meter, but a low-W attractor the player
-slides into because it is locally optimal every turn.** The theme emerges from the math.
+> **Framing guardrail (settled 2026-06-06).** Stakes are **national, never personal.** This is
+> *nation-building*, not regime survival — there is **no** jail/immunity/asset-seizure of the
+> player, no coups, no election-rigging, no coalition coup-proofing (that machinery belongs to
+> Trapo). B measures *whether growth is broad or hollow*, not how coup-proof a ruler is. Drop the
+> "loyalty trap / tenure / kleptocracy ∝ 1/W" dictator language entirely.
 
 ### The "buy approval" step (machine-politics dials)
 
@@ -230,39 +236,42 @@ Philippines sits at **32/100 and falling** (Transparency International 2025, an 
 as slow national decay, **never a game-over** (consistent with the settled non-fatal / open-ended
 rules).
 
-## The deferred bill: what you lose when you lose the mandate (PROPOSED resolution of the knot)
+## The deferred bill: what you lose is the NATION's, not yours (resolution of the knot)
 
-The shadow loop only has teeth if losing power costs something — and the research gives a resolution
-that is *self-balancing*: **the shadow loop builds its own punishment.** While in power, banked rents
-and a narrowed coalition are *assets*; the moment the player loses the mandate, they lose immunity and
-those assets flip into liabilities. Three deferred bills, all **non-fatal** (a brutal setback, never
-game-over — honors the settled rules):
+The shadow loop only has teeth if losing the mandate costs something — and the resolution is
+*self-balancing*: **the shadow loop builds its own reckoning, paid in national currency.** Corruption
+buys you a cheap mandate now; the bill comes due as harm to *the country and the mission*, never as
+personal punishment. Three deferred bills, all **non-fatal** (a brutal setback, never game-over — and
+**fully national**, per the framing guardrail: no jail, no coups, nothing happens to *you*):
 
-1. **The reckoning.** Accumulated corruption becomes prosecutable — asset/war-chest seizure, charges.
-   *Grounded:* ~half of ousted autocrats face exile/jail/death; 78+ countries have prosecuted
-   ex-leaders since 2000, charges *overwhelmingly* corruption. **Severity scales with `1/W`** — a
-   narrow/personalist regime draws a harsh fate (~75% bad outcome), a broad/clean one exits safe
-   (<20%). *How* you held power sets *what* you lose.
-2. **The reversal.** The successor freezes and rolls back the player's levers and in-flight projects
-   wholesale (real anchor: a new administration rescinding ~78 predecessor orders in one stroke). Your
-   legacy decays; you re-enter from a weaker position. Tunable `reversal_fraction`.
-3. **The bust-snap.** Rent-bought loyalty is *fair-weather* — it holds in a boom and **snaps in a
-   crisis**. A small-W regime is durable while prosperity rises but **brittle** when the economy turns:
-   a downturn (debt crisis / wage drop / growth stall) detonates dormant `grievance` into
-   scandal/unrest, and the bought coalition defects *during* the crunch. The same corruption that was
-   glue becomes the detonator. (Anchor: the corruption-stability brake vanishes in downturns; rent
-   loyalty snaps in crises.)
+1. **The backslide.** Lose the mandate and the old order drifts back; your reforms get unwound and the
+   country slides *down the mountain you've been climbing*. The sting is to the climb — the whole game
+   — not to your freedom. (Anchor: successors reverse predecessors wholesale; EDSA "People Power"
+   restored *elite* democracy and the dynasties grew back.) Tunable `backslide_fraction`.
+2. **The captured state.** Your accumulated corruption doesn't punish *you* — it has **hollowed the
+   institutions.** Whoever governs next (including you, if you return) inherits a leaky, captured state
+   that is far harder to reform: high baseline leakage, low accountability, entrenched dynasts. Your
+   shortcuts became *the nation's* long-term scar. **Severity scales with how narrow/hollow (low B)
+   the development got** — broad, clean development leaves a healthy state; a propped-up few leave a
+   rotten one.
+3. **The tarnished legacy.** The open-ended sandbox really asks: *did the Movement take the country
+   back to the top — cleanly?* Corruption corrodes that **legacy score** — the national yardstick the
+   game is framed around. (Plus the *brittleness* effect: hollow, propped-up development can't absorb a
+   downturn — when the economy turns, the narrow base can't hold and discontent erupts, accelerating
+   the backslide. National unrest, **not** a coup.)
 
-Net: the cheap survival path compounds a hidden liability and a brittleness that detonates exactly when
-the player can least afford it. The "soft loss" election finally *means something* without a campaign
-minigame — you are still building a nation; the stakes just became real. **Corruption and
-election-stakes were the same knot; W ties them together.**
+Net: the cheap path to holding the mandate compounds a national liability and a brittleness that bites
+exactly when the country can least afford it. The "soft loss" election finally *means something* — the
+stakes are the nation's trajectory and the Movement's clean legacy, with no campaign minigame and
+nothing personal. **Corruption and election-stakes were the same knot; development breadth (B) ties
+them together.**
 
 ## Settled-so-far (this brainstorm)
 
 1. **Corruption is leverageable, not a pure debuff** — inverted-U grease curve (Ang's access money).
-2. **Its real upside is to the *party*** (survival/war chest/compliance), not just the corrupted
-   layer — the shadow loop vs. the honest loop (selectorate theory).
+2. **Its real upside is to the *party*** (a cheap mandate / war chest / compliance), not just the
+   corrupted layer — the shadow loop vs. the honest loop (instrumental to the *mission*, not personal
+   survival).
 3. **It's an autonomous regional climate** the player governs via policy toggles + occasional
    direct patronage — not a system the player hand-operates.
 4. **Per-municipality stock with memory** (not a per-tick derived value), on the generic
@@ -270,21 +279,24 @@ election-stakes were the same knot; W ties them together.**
 5. **Self-reinforcing trap** (two basins, tipping point, hysteresis) → leverage is a treadmill.
 6. **Non-fatal**, CPI-style scoreboard, scandals as events. Honors the open-ended/no-game-over rules.
 7. **Grease = faster builds at higher peso cost.**
-8. **Coalition breadth (W) is the formal spine** — derived (never set), shrunk by patronage; small W
-   = cheaper/coup-proof/longer-tenured survival decoupled from prosperity = the dynasty attractor.
-9. **The election-stakes knot has a proposed resolution: the deferred bill** (reckoning + reversal +
-   bust-snap, severity ∝ 1/W). Self-balancing; the shadow loop builds its own punishment.
+8. **Development breadth (B) is the formal spine** — derived (never set), narrowed by patronage;
+   narrow B = cheaper/faster mandate but hollow growth decoupled from broad prosperity = the
+   "become the establishment" attractor. **No dictator framing** (no coup-proofing/tenure/jail).
+9. **Stakes are fully NATIONAL** — the deferred bill is the *backslide* + *captured state* +
+   *tarnished legacy* (severity scales with how hollow/low-B development got). Self-balancing; the
+   shadow loop builds its own reckoning, paid by the country, never the person.
 
 ## Open questions (resume here)
 
-- **THE KNOT — what do you lose when you lose the mandate? → PROPOSED (needs sign-off).** Resolved
-  above as **the deferred bill** (reckoning + reversal + bust-snap, severity ∝ 1/W). Awaiting the
-  user's confirmation that this is the direction. The earlier candidates (lose capability/runway;
-  lose score only) are *subsumed* — reversal = lose runway, the reckoning/seizure = lose more.
-- **Ambition: minimal spine vs. full model.** Minimal = corruption-per-region (done) + one derived
-  **W** + patronage shrinks W + losing triggers a reckoning scaled by W. Full adds the grievance
-  reservoir, broker slippage/reciprocity stocks, civil-service levers, the bust-snap as its own
-  system. *Which do we build first?* (Guards the "nation-building, not a politics sim" line.)
+- **THE KNOT — what do you lose when you lose the mandate? → RESOLVED (2026-06-06).** The **deferred
+  bill, paid in national currency**: backslide + captured state + tarnished legacy, severity scaling
+  with how hollow/low-B development got. Confirmed **fully national** — no personal/punitive framing
+  (that's Trapo's). Remaining: tune the three bills' magnitudes when this reaches techspec.
+- **Ambition: FULL model (chosen), aimed at nation-building depth.** Pour richness into the
+  *national* axis — regional corruption climate, grease curve, leakage signatures, anti-corruption
+  levers, the trap, scandals, development breadth (B), and the three-part backslide — **not** into
+  regime-survival machinery (coups/prosecution/coalition coup-proofing are out). Sequencing into
+  buildable slices is for `/to-issues`.
 - **What exactly does "grease" buy** beyond build speed — also industry output? compliance? Keep to
   1–2 for legibility. (Industry-output coupling flagged as raw — the economy should *leverage*
   corruption, not be dominated by it.)

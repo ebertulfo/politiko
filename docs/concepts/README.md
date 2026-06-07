@@ -16,4 +16,12 @@ Trapo's eventual endgame. Neither is wasted on the other.
 The settled decisions in [`../REVIEW-TRACKER.md`](../REVIEW-TRACKER.md) (open-ended, no game-over, etc.)
 belong to **Statesman**. Trapo's "game-over is personal" failure model is its own thing and does **not**
 apply to Statesman.
+
+## Statesman sub-docs
+
+- [`statesman.md`](statesman.md) — the concept (form, loop, levers, story/world).
+- [`statesman-vision.md`](statesman-vision.md) — **the game vision & pillars** (Cities-Skylines-on-a-
+  nation + Victoria-3 economy + infrastructure spine). The load-bearing anchor for all design.
+- [`corruption.md`](corruption.md) — candidate stakes mechanic. **Provisional** (pending research;
+  may be shelved). The vision stands without it.
 </content>

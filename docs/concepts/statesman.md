@@ -19,6 +19,8 @@ starting fresh.
 
 ## Form
 
+**Cities: Skylines at the scale of a nation, with a Victoria-3-style economy and infrastructure as the
+spine** — see [`statesman-vision.md`](statesman-vision.md) for the full vision & pillars.
 **Map-first.** The 3D Philippines is the primary readout and the primary interaction surface — regions
 colored by a chosen metric (satisfaction, revenue, poverty, market access), terrain visibly readable.
 Around it: a national dashboard (date, treasury, approval, levers, speed) and a region panel. This is
@@ -59,7 +61,8 @@ The direction to explore (distinct from Game 2's personal-corruption tycoon) is 
 makes *governing* hard**: interest groups / factions with competing demands, legitimacy and coalitions,
 a political system you must work *through* rather than a set of sliders you simply own. That layer — not
 personal enrichment — is what could give the map game its missing tension. **This is the next thing to
-design.**
+design** — now in progress as [`corruption.md`](corruption.md), which proposes corruption (as a
+leverageable instrument with a shadow "stay-in-power" loop) as exactly this stakes layer.
 
 ## World, Story & Setting (grill-me — in progress, 2026-06-06)
 

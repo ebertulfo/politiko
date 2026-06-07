@@ -19,6 +19,8 @@ starting fresh.
 
 ## Form
 
+**Cities: Skylines at the scale of a nation, with a Victoria-3-style economy and infrastructure as the
+spine** — see [`statesman-vision.md`](statesman-vision.md) for the full vision & pillars.
 **Map-first.** The 3D Philippines is the primary readout and the primary interaction surface — regions
 colored by a chosen metric (satisfaction, revenue, poverty, market access), terrain visibly readable.
 Around it: a national dashboard (date, treasury, approval, levers, speed) and a region panel. This is

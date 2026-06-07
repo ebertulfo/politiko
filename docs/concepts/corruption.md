@@ -1,7 +1,9 @@
 # Concept: Corruption (Statesman core mechanic — IN DESIGN)
 
-- **Status:** Brainstorm in progress (2026-06-06). **Not yet settled, not PRD'd.** This is the
-  candidate for Statesman's missing **stakes layer** — the political tension the doc
+- **Status:** Brainstorm in progress. **PROVISIONAL — not yet settled, not PRD'd, may be shelved.**
+  Must earn its place against [`statesman-vision.md`](statesman-vision.md) via the pending
+  "corruption-distorts-allocation" research; if that doesn't deliver, the vision stands without it.
+  Candidate for Statesman's missing **stakes layer** — the tension the doc
   [`statesman.md`](statesman.md) flags as "the next thing to design." Two deep-research rounds
   done (mechanics of corruption; political economy of patronage/survival). The election-stakes
   knot is **resolved** as a **fully national** deferred bill (see below) — no personal/regime-survival
